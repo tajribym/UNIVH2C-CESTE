@@ -1,0 +1,323 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.background {
+    height: 60vh; /* 60% de la hauteur de la fenêtre */
+    width: 100vw; /*100% de la largeur de la fenêtre*/
+    background-image: url(../image/BANNIERECESTE.png);
+    background-size: cover; /* Couvre tout l'élément*/
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat;
+    position: relative; /* Position relative pour le contenu */
+    margin: auto;  /* Centre le header horizontalement */
+    top: 20%; 
+    align-items: center; 
+    justify-content: center; 
+    display: flex;
+    min-width: 100%;
+    flex: 0 0 auto;
+}
+
+/* Flèche de défilement */
+.scroll-down {
+    position: absolute;
+    justify-content: right;
+    top: 17px;
+    left: 25%;
+    transform: translateX(-50%);
+    color: #111;
+    text-align: center;
+    animation: bounce 2s infinite;
+    font-style: oblique;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5)
+}
+.scroll-down p {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+/* Animation de rebond pour la flèche */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+.language-selector a {
+    color: #607c6b;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+
+#fsbm{
+
+    position: absolute;
+    top: 20px; /* Espace par rapport au haut de la page */
+    right: 40px; /* Espace par rapport au bord gauche */
+}
+#fsbm img{
+  width: 120px; /* Taille du logo */
+  height: auto;
+  object-fit: contain; /* Maintient les proportions du logo */
+}
+
+
+nav {
+    background-color: #333;
+    display: flex; 
+    justify-content: space-around; 
+    padding: 10px;
+    margin: auto;
+    top: 0; /* Fixe la barre de navigation en haut */
+    width: 100vw; /* S'assure que la barre de navigation prend toute la largeur */
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.3em;
+    transition: background-color 0.2s ease, color 0.2s ease, font-size 0.2s ease;
+
+}
+nav a:hover{
+    background-color: #607c6b;
+    color: white;
+    font-size: 1.4em; 
+    border-radius: 10px;
+    
+    
+}
+
+
+nav.fixed {
+    position: fixed; /* Fixe la barre de navigation */
+    top: 0; /* La fixe en haut */
+    z-index: 1000; /* Assure qu'elle est au-dessus des autres éléments */
+}
+.ligne p{
+    background: #cfd7d0;
+    box-shadow: 0px 1px 14px 2px black;
+    border-top-left-radius: 50px; /* Coin arrondi en haut à gauche */
+    border-bottom-right-radius:50px;
+    padding: 20px;
+    max-width: 65vw;
+    margin: auto;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-color: #111;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 20px;
+}
+
+.ligne h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    background-color: #607c6b;
+    color: #FFFFFF;
+    padding: 20px;
+    margin-top: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    max-width: 100vw;
+}
+
+
+.image{
+    display: flex;
+    margin-left: auto; 
+    justify-content: center;
+}
+
+.image img{
+    max-width:20%;
+    height: 30%;
+    margin: 20px;
+    margin-top: 50px;
+    right: 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 300px;
+}
+ .image img:hover {
+    transform: scale(1.05); /* Agrandir légèrement l'image */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7); /* Ombre plus prononcée */
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 90%; /* عرض الشريط بالكامل */
+    margin: auto;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    align-items: flex-start;
+    width: fit-content;
+    transform: translateX(0px);
+  }
+  
+  .activite {
+    flex: 0 0 200px;
+    width: 200px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
+  .activite img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .activite:hover img {
+    transform: scale(1.05);
+  }
+  
+  .act-info {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    font-size: large;
+    opacity: 0;
+    max-height: 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+.activite:hover .act-info {
+    opacity: 1;
+    max-height: 100px;
+    min-height: 40px;
+    margin: auto;
+}
+.activite:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    
+}
+.sns{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.sns a img {
+    width: 40px;
+    margin: 20px;
+}
+
+
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    box-shadow: 0 12px 24px hsla(0, 0%, 0%, .3);
+    padding: 6px;
+    font-size: 1.25rem;
+    transition: bottom .4s, transform .4s;  
+}
+.scrollup:hover{
+    transform: translateY(-.5rem);
+}
+.show-scroll{
+    bottom: 3rem;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .pa {
+      flex-direction: column;
+    }
+    .pa .ligne p{
+        font-size: 14px; /* تصغير النص للشاشات الصغيرة */
+        align-items: center;
+        justify-items: center;
+      }
+  
+      .image img {
+        flex: 1 1 150px;
+        align-items: center;
+        justify-items: center; /* تصغير الصور للشاشات الصغيرة */
+      }
+    }
+  
+    @media screen and (max-width: 480px) {
+      .pa .ligne p{
+        font-size: 12px; /* تصغير إضافي للنص للشاشات الصغيرة جدًا */
+        align-items: center;
+        justify-items: center;
+      }
+  
+      .image img {
+        flex: 1 1 100px; /* تصغير الصور أكثر */
+        align-items: center;
+        justify-items: center;
+      }
+    }
